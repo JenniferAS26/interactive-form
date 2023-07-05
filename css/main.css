@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background: #FF7A7A url("../assets/images/wallpaper.png");
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  display: grid;
+  align-content: stretch;
+  justify-items: center;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr 2fr;
+  margin-bottom: 70px;
+}
+.wrapper .info-container {
+  width: 100%;
+  height: 100%;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.3rem;
+}
+.wrapper .info-container h1 {
+  font-size: 3.8rem;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+}
+.wrapper .info-container p {
+  font-size: 1.4rem;
+  text-align: center;
+  color: #ffffff;
+}
+.wrapper .subscription-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 80px 1fr;
+  gap: 1.5rem;
+  justify-items: center;
+  padding: 20px 35px;
+  animation: 1s side-content 0.5s ease-in-out;
+}
+.wrapper .subscription-container .discount-card {
+  align-self: center;
+  padding: 24px 32px;
+  background-color: #6055A5;
+  width: inherit;
+  height: 73px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.2);
+}
+.wrapper .subscription-container .discount-card p {
+  color: #b9b6d3;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.wrapper .subscription-container .discount-card p span {
+  color: #ffffff;
+  font-weight: 700;
+}
+.wrapper .subscription-container .card-container {
+  max-width: 100%;
+  height: auto;
+  padding: 16px 0;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.wrapper .subscription-container .card-container .signup {
+  width: 100%;
+  height: 100%;
+  padding: 24px 38px;
+  display: grid;
+  gap: 2.5rem;
+}
+.wrapper .subscription-container .card-container .signup input {
+  width: 100%;
+  height: 45px;
+  border: 1.5px solid #dcdcdc;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+}
+.wrapper .subscription-container .card-container .signup input::-moz-placeholder {
+  color: #000000;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.wrapper .subscription-container .card-container .signup input::placeholder {
+  color: #000000;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.wrapper .subscription-container .card-container .signup input:focus {
+  outline: 1px solid #000000;
+}
+.wrapper .subscription-container .card-container .signup button {
+  cursor: pointer;
+  width: 100%;
+  height: 60px;
+  border: none;
+  border-radius: 4px;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.08);
+  background-color: #38cc8c;
+  color: #ffffff;
+  text-transform: uppercase;
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+}
+.wrapper .subscription-container .card-container .signup button:active, .wrapper .subscription-container .card-container .signup button:hover {
+  transform: scale(1.1) translateY(2px);
+  background-color: #60D6A3;
+}
+.wrapper .subscription-container .card-container p {
+  padding: 0 25px;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #b9b6d3;
+}
+.wrapper .subscription-container .card-container p a {
+  color: #FF7A7A;
+  font-weight: 700;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  margin-top: 50px;
+}
+footer .credits {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  bottom: 3rem;
+  right: 3rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(to left, rgba(0, 119, 255, 0.753), rgba(255, 154, 21, 0.616));
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+footer .credits::after {
+  content: "J A S";
+  color: #ffffff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+footer .credits::before {
+  content: "J A S";
+  color: #ffffff;
+  filter: blur(5px);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+footer .credits .loading {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  border-top: 2px solid #38cc8c;
+  animation: rotateMove 5s infinite linear;
+  transition-delay: 1s;
+}
+footer .credits .credits-content {
+  opacity: 0;
+  margin-left: 0.8rem;
+  transform: translateX(-30px);
+}
+footer .credits .credits-content p {
+  color: #000000;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+footer .credits .credits-content p a {
+  color: #ffffff;
+}
+footer .credits:hover {
+  width: 350px;
+  height: 60px;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+}
+footer .credits:hover::after {
+  display: none;
+}
+footer .credits:hover::before {
+  display: none;
+}
+footer .credits:hover .loading {
+  display: none;
+}
+footer .credits:hover .credits-content {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+
+@media (min-width: 730px) {
+  .wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 140px;
+  }
+  .wrapper .info-container {
+    width: 50%;
+  }
+  .wrapper .info-container h1 {
+    font-size: 4.5rem;
+    text-align: left;
+  }
+  .wrapper .info-container p {
+    text-align: left;
+    font-size: 1.6rem;
+  }
+  .wrapper .subscription-container {
+    max-width: 550px;
+  }
+  .wrapper .subscription-container .discount-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 57px;
+  }
+}
+@keyframes side-content {
+  0% {
+    transform: translateX(900px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes rotateMove {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=main.css.map */
