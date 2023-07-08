@@ -6,11 +6,9 @@ const getData = () => {
     const email = document.querySelector('#input-email').value;
     const password = document.querySelector('#input-password').value;
 
-    let data = {name, lastname, email, password};
+    const data = {name, lastname, email, password};
     users.push(data);
     localStorage.setItem('users', JSON.stringify(users));
-    
-
 };
 
 form.addEventListener('submit', e => {
