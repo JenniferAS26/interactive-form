@@ -11,7 +11,7 @@ html {
 body {
   width: 100vw;
   min-height: 100vh;
-  background: #FF7A7A url("../assets/images/wallpaper.png");
+  background: #FF7A7A url("./wallpaper.png");
   background-size: cover;
   font-family: "Poppins", sans-serif;
   position: relative;
