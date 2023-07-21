@@ -19,11 +19,26 @@
             </div>
             <div class="card-container">
                 <form class="signup">
-                    <input type="text" placeholder="First Name" id="input-name" required autocomplete="on">
-                    <input type="text" placeholder="Last Name" id="input-lastname" required>
-                    <input type="email" placeholder="Email Address" id="input-email" required>
-                    <input type="password" placeholder="Password" id="input-password" required>
-                    <button type="submit">claim your free trial</button>
+                    <input class="input" type="text" placeholder="First Name" id="input-name" required autocomplete="on">
+                    <div class="input__name--error error">
+                        <img src="./assets/images/icon-error.svg" alt="" class="icon-error">
+                    </div>
+
+                    <input class="input" type="text" placeholder="Last Name" id="input-lastname" required>
+                    <div class="input__lastname--error error">
+                        <img src="./assets/images/icon-error.svg" alt="" class="icon-error">
+                    </div>
+
+                    <input class="input" type="email" placeholder="Email Address" id="input-email" required>
+                    <div class="input__email--error error">
+                        <img src="./assets/images/icon-error.svg" alt="" class="icon-error">
+                    </div>
+
+                    <input class="input" type="password" placeholder="Password" id="input-password" required>
+                    <div class="input__password--error error">
+                        <img src="./assets/images/icon-error.svg" alt="" class="icon-error">
+                    </div>
+                    <button type="submit" class="signup__button">claim your free trial</button>
                 </form>
                 <p>By clicking the button, you are agreeing to our <a href="#"> Terms and Services</a></p>
             </div>

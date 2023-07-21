@@ -7,6 +7,7 @@
 $background: #FF7A7A;
 $primary-color: #ffffff;
 $secondary-color: #dcdcdc;
+$error: hsl(0, 100%, 66%);
 $font-stack: 'Poppins', sans-serif;
 $light-weight: 400;
 $medium-weight: 500;
@@ -123,7 +124,7 @@ a {
                         letter-spacing: 1px;
                     }
                     &:focus {
-                        outline: 1px solid #000000;
+                        outline: 1px solid $auxiliar-text-color;
                     }  
                 }
                 button {
@@ -238,7 +239,20 @@ footer {
 }
 
 
-
+.error {
+    color: $error;
+    margin: -18px 0 10px;
+    font-size: 1rem;
+    text-align: right;
+    position: relative;
+    .icon-error {
+        display: none;
+        // display: block;
+        position: absolute;
+        top: -40px;
+        right: 15px;
+    }
+}
 
 @media (min-width: 730px) {
    .wrapper {
@@ -249,7 +263,7 @@ footer {
         // gap: 2.5rem;
         margin-top: 140px;
         .info-container {
-            width: 50%;
+            width: 30%;
             h1 {
                 font-size: 4.5rem;
                 text-align: left;
@@ -260,7 +274,7 @@ footer {
             }
         }
         .subscription-container {
-            max-width: 550px;
+            max-width: 600px;
             .discount-card {
                 @include flexCenter(row, center, center);
                 height: 57px;

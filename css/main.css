@@ -124,7 +124,7 @@ a {
   letter-spacing: 1px;
 }
 .wrapper .subscription-container .card-container .signup input:focus {
-  outline: 1px solid #000000;
+  outline: 1px solid #b9b6d3;
 }
 .wrapper .subscription-container .card-container .signup button {
   cursor: pointer;
@@ -235,6 +235,20 @@ footer .credits:hover .credits-content {
   transition: all 0.5s ease-in-out;
 }
 
+.error {
+  color: hsl(0, 100%, 66%);
+  margin: -18px 0 10px;
+  font-size: 1rem;
+  text-align: right;
+  position: relative;
+}
+.error .icon-error {
+  display: none;
+  position: absolute;
+  top: -40px;
+  right: 15px;
+}
+
 @media (min-width: 730px) {
   .wrapper {
     width: 100%;
@@ -244,7 +258,7 @@ footer .credits:hover .credits-content {
     margin-top: 140px;
   }
   .wrapper .info-container {
-    width: 50%;
+    width: 30%;
   }
   .wrapper .info-container h1 {
     font-size: 4.5rem;
@@ -255,7 +269,7 @@ footer .credits:hover .credits-content {
     font-size: 1.6rem;
   }
   .wrapper .subscription-container {
-    max-width: 550px;
+    max-width: 600px;
   }
   .wrapper .subscription-container .discount-card {
     display: flex;
@@ -280,4 +294,4 @@ footer .credits:hover .credits-content {
   100% {
     transform: rotate(360deg);
   }
-}/*# sourceMappingURL=main.css.map */
+}
