@@ -30,7 +30,6 @@ let nameErrorDiv = document.querySelector('.input__name--error');
 
 nameInput.addEventListener('input', () => {
     if (nameInput.value === '') {
-        iconError.style.display = 'block';
         showError(nameInput, nameErrorDiv, 'Este campo no puede estar vacio');
     } else {
         showError(nameInput, nameErrorDiv, '', false);
